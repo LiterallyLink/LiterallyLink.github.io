@@ -1,0 +1,19 @@
+{
+  "name": "literallylink.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zechariah Peoples",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiterallyLink/LiterallyLink.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LiterallyLink/LiterallyLink.github.io/issues"
+  },
+  "homepage": "https://github.com/LiterallyLink/LiterallyLink.github.io#readme"
+}
