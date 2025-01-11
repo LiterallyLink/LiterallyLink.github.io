@@ -4,152 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-
-        .navbar {
-            background-color: #24292e;
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #363b42;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .search-container {
-            display: flex;
-            align-items: center;
-            margin-right: 1rem;
-        }
-
-        .search-text {
-            color: #8b949e;
-            font-size: 0.9rem;
-        }
-
-        .theme-toggle {
-            color: #ffffff;
-            cursor: pointer;
-            font-size: 0.9rem;
-            padding: 0.5rem;
-            border-radius: 4px;
-        }
-
-        .theme-toggle:hover {
-            background-color: #363b42;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #58a6ff;
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background-color: #24292e;
-                flex-direction: column;
-                padding: 1rem;
-                text-align: center;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <a href="#" class="logo">Portfolio</a>
+            <div class="nav-section nav-left">
+                <a href="#" class="logo">Portfolio</a>
+            </div>
+            <div class="nav-section nav-center-left">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+            </div>
+            <div class="nav-section nav-center-right">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-section nav-right">
+                <div class="search-container">
+                    <span class="search-text">Search</span>
+                </div>
+                <span class="theme-toggle">Theme</span>
+                <span class="accessibility-toggle">Accessibility</span>
+            </div>
             <div class="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <div class="search-container">
-                    <span class="search-text">Search</span>
-                </div>
-                <span class="theme-toggle">Theme</span>
-            </div>
         </div>
     </nav>
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const spans = menuToggle.querySelectorAll('span');
-            spans[0].style.transform = navLinks.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : 'none';
-            spans[1].style.opacity = navLinks.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navLinks.classList.contains('active') ? 'rotate(-45deg) translate(7px, -7px)' : 'none';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #24292e;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #363b42;
+}
+
+.nav-content {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.nav-center-left {
+    flex: 2;
+    justify-content: center;
+}
+
+.nav-center-right {
+    flex: 2;
+    justify-content: center;
+}
+
+.nav-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-section a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-section a:hover {
+    color: #58a6ff;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-text {
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.theme-toggle {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.theme-toggle:hover,
+.accessibility-toggle:hover {
+    background-color: #363b42;
+}
+
+.accessibility-toggle {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-section {
+        display: none;
+    }
+
+    .nav-section.nav-left {
+        display: flex;
+    }
+
+    .nav-content.active .nav-section {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #24292e;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid #363b42;
+    }
+}
